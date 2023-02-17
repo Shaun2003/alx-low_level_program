@@ -1,20 +1,28 @@
 #include <stdio.h>
-
 /**
- * main - prints alpha in lower and upper case
- * Return: Always 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	char ch;
+	char c;
 
-	for (ch = 'a'; ch <= 'z'
-		putchar(ch);
+	char d;
 
-	for (ch = 'A'; ch <= 'Z'
-		putchar(ch);
-
+	c = 'a';
+	d = 'A';
+	while
+		(c <= 'z') {
+			putchar(c);
+			c++;
+		}
+	while
+		(d <= 'Z') {
+			putchar(d);
+			d++;
+		}
 	putchar('\n');
-
 	return (0);
 }
