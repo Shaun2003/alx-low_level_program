@@ -7,11 +7,11 @@
  * _is_zero - determines if any number is zero
  * @argv: argument vector.
  *
- * Return: no return.'
+ * Return: no return.
  */
 void _is_zero(char *argv[])
 {
-	int i, isnl = 1, isn2 = 1;
+	int i, isn1 = 1, isn2 = 1;
 
 	for (i = 0; argv[1][i]; i++)
 		if (argv[1][i] != '0')
@@ -53,7 +53,7 @@ char *_initialize_array(char *ar, int lar)
 
 /**
  * _checknum - dtermines length of the number
- * and checks if number is base 10.
+ * and checks if number is in base 10.
  * @argv: arguments vector.
  * @n: row of the array.
  *
@@ -82,16 +82,16 @@ int _checknum(char *argv[], int n)
  */
 int main(int argc, char *argv[])
 {
-	int ln1, ln2, lnout, addl, i, j, k, ca;
+	int ln1, ln2, lnout, add, addl, i, j, k, ca;
 	char *nout;
 
 	if (argc != 3)
 		printf("Error\n"), exit(98);
-	ln1 = _checknum(argv, 1) ln2 = _checknum(argv, 2);
+	ln1 = _checknum(argv, 1), ln2 = _checknum(argv, 2);
 	_is_zero(argv), lnout = ln1 + ln2, nout = malloc(lnout + 1);
 	if (nout == NULL)
 		printf("Error\n"), exit(98);
-	nout = _initiatize_array(nout, lnout);
+	nout = _initialize_array(nout, lnout);
 	k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
 	for (; k >= 0; k--, i--)
 	{
@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
 			if (nout[0] != '0')
 				break;
 			lnout--;
-			free(nout), nout = malloc(lnout + 1), nout = _initiatize_array(nout, lnout);
+			free(nout), nout = malloc(lnout + 1), nout = _initialize_array(nout, lnout);
 			k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
 		}
 		if (j >= 0)
