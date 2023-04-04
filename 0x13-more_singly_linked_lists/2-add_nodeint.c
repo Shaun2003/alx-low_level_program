@@ -1,14 +1,12 @@
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * add_nodeint - adds a new node at the beginning of
- * a listint_t list
- * @head: a pointer to the address of the head of
- * the listint_t list
- * @n: the integer for the new node to contain
+ * add_nodeint - Add a listint_t node to a list
+ * @head: Pointer to the pointer at the start of the list
+ * @n: The value to assign to the nodes integer value
  *
- * Return: if the function fails - NULL
- * otherwise - the address of the new element
+ * Return: The address of the new element, NULL if it fails
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
@@ -17,11 +15,8 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
-
 	new->n = n;
 	new->next = *head;
-
 	*head = new;
-
 	return (new);
 }
