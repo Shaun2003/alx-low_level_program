@@ -31,7 +31,7 @@ int main(void)
 	add_nodeint(&head, 3);
 	add_nodeint(&head, 4);
 	node->next = add_nodeint(&head, 98);
- 	add_nodeint(&head, 402);
+	add_nodeint(&head, 402);
 	add_nodeint(&head, 1024);
 	print_listint_safe(head);
 	return (0);
